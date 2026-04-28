@@ -10,14 +10,14 @@ import io
 # Initialize the ML predictor
 predictor = PolicyImpactPredictor()
 
-#@app.route('/')
-#def index():
-    #"""Home page with policy input form"""
-    #recent_policies = Policy.query.order_by(Policy.created_at.desc()).limit(5).all()
-    #return render_template('index.html', recent_policies=recent_policies)
 @app.route('/')
 def index():
-    return "App is running 🚀"
+    """Home page with policy input form"""
+    recent_policies = Policy.query.order_by(Policy.created_at.desc()).limit(5).all()
+    return render_template('index.html', recent_policies=recent_policies)
+#@app.route('/')
+#def index():
+    #return "App is running 🚀"
 
 @app.route('/dashboard')
 def dashboard():
