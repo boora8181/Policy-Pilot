@@ -56,7 +56,7 @@ with app.app_context():
     db.create_all()
     
     # Import and register routes
-    from routes import *
+from routes import *
 
 #if __name__ == '__main__':
    # app.run(host='0.0.0.0', port=5000, debug=True)
