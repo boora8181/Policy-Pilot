@@ -3,7 +3,7 @@ from app import app, db
 from models import Policy, PolicyPrediction, HistoricalPolicy
 from ml_models import PolicyImpactPredictor
 from pdf_generator import generate_policy_report
-from data_processor import load_historical_data
+from data.data_processor import load_historical_data
 import logging
 import io
 
